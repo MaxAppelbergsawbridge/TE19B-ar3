@@ -12,8 +12,8 @@
         <TextBox Name="inputtext"> </TextBox>
         <Label> Ange en nyckel (1-9) </Label>
         <TextBox Name="inputnyckel"> </TextBox>
-        <TextBlock Name="OuputText"></TextBlock>
-        <Button Click="Knapp"> </Button>
+        <TextBox Name="ouputtext"></TextBox>
+        <Button Click="Knapp">ok </Button>
         <Label>Texten krypterad </Label>
         <TextBlock Name="outputkrypterad"></TextBlock>
         </StackPanel>

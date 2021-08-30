@@ -24,15 +24,15 @@ namespace Uppgift_1
         {
             InitializeComponent();
         }
-        private void knapp (Object sender,RoutedEventArgs e)
+        private void Knapp (Object sender,RoutedEventArgs e)
         {
             string text= inputtext.Text;
             int nyckel=0;
             string nyckelString=inputtext.Text;
-            while (!int.TryParse(nyckelString,out nyckel))
+           /* while (!int.TryParse(nyckelString,out nyckel))
             {
-                OutputText.Text="Du måste mata in ett tal mellan (1-9)Försök igen";
-            }
+                ouputtext.Text="Du måste mata in ett tal mellan (1-9)Försök igen";
+            }*/
             string kryptadText = "";
             for (int i = 0; i < text.Length; i++)
             {
