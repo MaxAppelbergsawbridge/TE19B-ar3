@@ -1,0 +1,29 @@
+﻿<Window x:Class="WPF_Uppgift_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Uppgift_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <Label> Miniräknare </Label>
+
+        <Label> Ange tal1 </Label>
+
+        <TextBox Name="tal1" Margin="5" Height="20" TextWrapping="Wrap" />
+        <Label>Ange tal2 </Label>
+        <TextBox Name="tal2" Margin="5" Height="20" TextWrapping="Wrap" />
+
+        <Label> </Label>
+        <Dockpanel HorizontalAlginment="Stretch" >
+        <Button Click="add" Margin="5" Height="50" Width="50">+ </Button>
+        <Button Click="minus" Margin="5" Height="50" Width="50">-</Button>
+        <Button Click="dela" Margin="5" Height="50" Width="50">/ </Button>
+        <Button Click="gånger" Margin="5" Height="50" Width="50">* </Button>
+        </Dockpanel>
+        <Label>Resultat </Label>
+        <TextBox Name="svar" Height="50" TextWrapping="Wrap" />
+        
+        </StackPanel>
+</Window>

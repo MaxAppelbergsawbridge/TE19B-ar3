@@ -5,16 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Uppgift_1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="380" Width="300"
+        Background="#EEE">
         <StackPanel>
         <Label> Ceasarkrypto </Label>
+
         <Label> Ange en text </Label>
-        <TextBox Name="inputtext"> </TextBox>
+        <TextBox Name="Rutatext" Margin="5" Height="50" TextWrapping="Wrap" />
+        
         <Label> Ange en nyckel (1-9) </Label>
-        <TextBox Name="inputnyckel"> </TextBox>
-        <TextBox Name="ouputtext"></TextBox>
-        <Button Click="Knapp">ok </Button>
+        <TextBox Name="Rutanyckel" Margin="5" Height="20" />
+
+        <Button Click="ClickKör">ok </Button>
         <Label>Texten krypterad </Label>
-        <TextBlock Name="outputkrypterad"></TextBlock>
+        <TextBox Name="Rutakrypterad" Height="50" TextWrapping="Wrap" />
+        
         </StackPanel>
 </Window>
