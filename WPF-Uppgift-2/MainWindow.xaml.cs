@@ -24,21 +24,86 @@ namespace WPF_Uppgift_2
         {
             InitializeComponent();
         }
-        private void Clickadd(Object sender, RoutedEventArgs e)
+        private void add(Object sender, RoutedEventArgs e)
         {
-
+            string siffra1=tal1.Text;
+            string siffra2=tal2.Text;
+            int ett=0;
+            int två=0;
+            if (!int.TryParse(siffra1,out ett ))
+            {
+                MessageBox.Show("Ange ett tal");
+            }
+            else if (!int.TryParse(siffra2,out två))
+            {
+                MessageBox.Show("Ange ett tal");
+            }    
+            else
+            {
+            int resultat= ett+två;
+            svar.Text= siffra1+"+"+siffra2+"="+resultat;    
+            }
         }
-        private void Clickminus(Object sender, RoutedEventArgs e)
+        private void minus(Object sender, RoutedEventArgs e)
         {
-
+            string siffra1=tal1.Text;
+            string siffra2=tal2.Text;
+            int ett=0;
+            int två=0;
+            if (!int.TryParse(siffra1,out ett ))
+            {
+                MessageBox.Show("Ange ett tal");
+            }
+            else if (!int.TryParse(siffra2,out två))
+            {
+                MessageBox.Show("Ange ett tal");
+            }    
+            else
+            {
+            int resultat= ett-två;
+            svar.Text= siffra1+"-"+siffra2+"="+resultat;   
         }
-        private void Clickdela(Object sender, RoutedEventArgs e)
-        {
-
         }
-        private void Clickgångra(Object sender, RoutedEventArgs e)
+        private void dela(Object sender, RoutedEventArgs e)
         {
+            string siffra1=tal1.Text;
+            string siffra2=tal2.Text;
+            int ett=0;
+            int två=0;
+            if (!int.TryParse(siffra1,out ett ))
+            {
+                MessageBox.Show("Ange ett tal");
+            }
+            else if (!int.TryParse(siffra2,out två))
+            {
+                MessageBox.Show("Ange ett tal");
+            }    
+            else
+            {
+            int resultat= ett/två;
+            svar.Text= siffra1+"/"+siffra2+"="+resultat;   
             
+        }
+        }
+        private void gånger(Object sender, RoutedEventArgs e)
+        {
+          string siffra1=tal1.Text;
+            string siffra2=tal2.Text;
+            int ett=0;
+            int två=0;
+            if (!int.TryParse(siffra1,out ett ))
+            {
+                MessageBox.Show("Ange ett tal");
+            }
+            else if (!int.TryParse(siffra2,out två))
+            {
+                MessageBox.Show("Ange ett tal");
+            }    
+            else
+            {
+            int resultat= ett*två;
+            svar.Text= siffra1+"*"+siffra2+"="+resultat;   
+            }
         }
     }
 }

@@ -16,14 +16,16 @@
         <TextBox Name="tal2" Margin="5" Height="20" TextWrapping="Wrap" />
 
         <Label> </Label>
-        <Dockpanel HorizontalAlginment="Stretch" >
-        <Button Click="add" Margin="5" Height="50" Width="50">+ </Button>
-        <Button Click="minus" Margin="5" Height="50" Width="50">-</Button>
-        <Button Click="dela" Margin="5" Height="50" Width="50">/ </Button>
-        <Button Click="gånger" Margin="5" Height="50" Width="50">* </Button>
-        </Dockpanel>
+        
+        <DockPanel HorizontalAlignment="Stretch" >
+            <Button Click="add" Margin="5" Height="50" Width="50">+ </Button>
+            <Button Click="minus" Margin="5" Height="50" Width="50">-</Button>
+            <Button Click="dela" Margin="5" Height="50" Width="50">/ </Button>
+            <Button Click="gånger" Margin="5" Height="50" Width="50">* </Button>
+        </DockPanel>
+
         <Label>Resultat </Label>
         <TextBox Name="svar" Height="50" TextWrapping="Wrap" />
         
-        </StackPanel>
+    </StackPanel>
 </Window>
