@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
-    <RootNamespace>WPF_Uppgift_3</RootNamespace>
+    <RootNamespace>WPF_Uppgift_4</RootNamespace>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 

@@ -12,8 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
-namespace WPF_Uppgift_3
+namespace Uppgift_5
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,6 +25,9 @@ namespace WPF_Uppgift_3
         {
             InitializeComponent();
         }
+        private void ClickÖppnaDialogruta(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog open
+        }
     }
-    private void 
 }

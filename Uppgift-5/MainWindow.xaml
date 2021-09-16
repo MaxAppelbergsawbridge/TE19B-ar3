@@ -1,18 +1,18 @@
-﻿<Window x:Class="WPF_Uppgift_3.MainWindow"
+﻿<Window x:Class="Uppgift_5.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WPF_Uppgift_3"
+        xmlns:local="clr-namespace:Uppgift_5"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-        <StackPanel>
-    <Label> Öppna en textfil </Label>
-    <Label> ange en filnamn </Label>
-    <TextBox name="fil"> </TextBox>
-    <Button name >
+    <StackPanel Margin="10";
+    <Label>Läsa en textfil</Label>
+<Button Click="ClickÖppna Dialogruta">Välj fil
+    <TextBox Name="resultatRuta" Marin="5" Height="150" Background="#FFF"
     <TextBox Name="resultatRuta" Margin="5" Height="150" Background="#FFF" 
     FontStyle="italic" TextWrapping="WrapWithOverflow" 
-    VerticalScrollBarVisibility="Auto" AcceptsReturn="True" IsReadOnly="True" />
-    </StackPanel>
+    VerticalScrollBarVisibility="Auto" AcceptsReturn="True" 
+    IsReadOnly="True" />
+
 </Window>
