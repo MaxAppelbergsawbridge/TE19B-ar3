@@ -36,7 +36,7 @@ namespace _3försöket3uppgiftet
                 ärKorrektInmattat = false;
             }
             float tal2;
-            if (!float.TryParse(tal1Ruta.Text, out tal2))
+            if (!float.TryParse(tal2Ruta.Text, out tal2))
             {
                 MessageBox.Show("Tal1 fel inmatning.\n formatet tex 2,5");
                 ärKorrektInmattat = false;
@@ -59,9 +59,9 @@ namespace _3försöket3uppgiftet
                 ärKorrektInmattat = false;
             }
             float tal2;
-            if (!float.TryParse(tal1Ruta.Text, out tal2))
+            if (!float.TryParse(tal2Ruta.Text, out tal2))
             {
-                MessageBox.Show("Tal1 fel inmatning.\n formatet tex 2,5");
+                MessageBox.Show("Tal2 fel inmatning.\n formatet tex 2,5");
                 ärKorrektInmattat = false;
             }
             if (ärKorrektInmattat)
@@ -82,9 +82,9 @@ namespace _3försöket3uppgiftet
                 ärKorrektInmattat = false;
             }
             float tal2;
-            if (!float.TryParse(tal1Ruta.Text, out tal2))
+            if (!float.TryParse(tal2Ruta.Text, out tal2))
             {
-                MessageBox.Show("Tal1 fel inmatning.\n formatet tex 2,5");
+                MessageBox.Show("Tal2 fel inmatning.\n formatet tex 2,5");
                 ärKorrektInmattat = false;
             }
             if (ärKorrektInmattat)
@@ -105,9 +105,9 @@ namespace _3försöket3uppgiftet
                 ärKorrektInmattat = false;
             }
             float tal2;
-            if (!float.TryParse(tal1Ruta.Text, out tal2))
+            if (!float.TryParse(tal2Ruta.Text, out tal2))
             {
-                MessageBox.Show("Tal1 fel inmatning.\n formatet tex 2,5");
+                MessageBox.Show("Tal2 fel inmatning.\n formatet tex 2,5");
                 ärKorrektInmattat = false;
             }
             if (ärKorrektInmattat)
