@@ -16,6 +16,11 @@ using System.IO;
 using System.Text.RegularExpressions;
 namespace new_json
 {
+    class Kontakt
+    {
+        public string Namn;
+        public string Mobil;
+    }
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -39,14 +44,15 @@ namespace new_json
             {
                 kontaktLista = File.ReadAllLines(filen).ToList();
             }
-            else {
+            else
+            {
                 rutaStatus.Text = "Filen finns inte";
             }
 
             // fyll på textrutan för alla kontakter
             foreach (var kontakten in kontaktLista)
             {
-                rutaAllaKontakter.Text += kontakten +"\n";
+                rutaAllaKontakter.Text += kontakten + "\n";
             }
         }
 
@@ -68,6 +74,13 @@ namespace new_json
 
                 // Spara ned!
                 File.WriteAllLines(filen, kontaktLista);
+                Kontakt objekt = new Kontakt();
+                objekt.Namn = namn;
+                objekt.Mobil = mobil;
+                /*{
+                    Namn = namn,
+                    Mobil = mobil
+                };*/
             }
             else
             {

@@ -1,0 +1,32 @@
+[
+  {
+    "namn": "t",
+    "timlön": 5,
+    "timmar": 5
+  },
+  {
+    "namn": "wa",
+    "timlön": 4,
+    "timmar": 5
+  },
+  {
+    "namn": "fa",
+    "timlön": 3,
+    "timmar": 4
+  },
+  {
+    "namn": "ga",
+    "timlön": 1,
+    "timmar": 2
+  },
+  {
+    "namn": "ha",
+    "timlön": 3,
+    "timmar": 4
+  },
+  {
+    "namn": "ha",
+    "timlön": 4,
+    "timmar": 5
+  }
+]
