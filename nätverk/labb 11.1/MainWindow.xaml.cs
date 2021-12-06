@@ -24,26 +24,25 @@ namespace labb_11._1
     {
         class NASA
         {
-            public List<NASA> Results { get; set; }
+            public string url { get; set; }
         }
-        class Data
-        {
-            public string bild { get; set; }
-        }
+
         public MainWindow()
         {
             InitializeComponent();
         }
         private void knapp(object sender, RoutedEventArgs e)
         {
-            string url = "https://api.nasa.gov/planetary/apod";
+            string url = "https://api.nasa.gov/planetary";
             var client = new RestClient(url);
-            var request = new RestRequest("api_key", RestSharp.DataFormat.Json);
+            var request = new RestRequest("apod?api_key=3BnO79NdS2UdwKGLDXDC1QtyGsRm8eqGaNcdJyND"
+, RestSharp.DataFormat.Json);
             var response = client.Get(request);
+
             NASA Results = new NASA();
             Results = JsonSerializer.Deserialize<NASA>(response.Content);
-            Uri resourceUri = new Uri(NASA.Results);
-            //imgDynamic.Source = new NASA.bild();
+            image1.Source = new BitmapImage(new Uri(Results.url));
+            System.Console.WriteLine();
         }
     }
 }
