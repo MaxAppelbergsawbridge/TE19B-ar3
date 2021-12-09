@@ -15,34 +15,45 @@ namespace klassdiagram
             {
                 //skapa objektet person från klassen Personinkomst 
                 PersonInkomst person = new PersonInkomst();
-                //ange namn
+                //ange Namn
                 Console.WriteLine("Räkna ut lönekostnad");
                 Console.WriteLine("Vad heter anställd");
-                person.namn = Console.ReadLine();
-                if (person.namn == "")
+                person.Namn = Console.ReadLine();
+                if (person.Namn == "")
                 {
                     break;
                 }
                 //ange timlön
-                Console.WriteLine("Vad är timlönen");
-                person.timlön = ReadInt();
+                Console.WriteLine("Vad är lönen");
+                person.Lön = ReadInt();
                 Console.WriteLine("Den anställdes arbetstid");
-                person.timmar = ReadInt();
+                person.Timmar = ReadInt();
                 //lagra i listan
                 listaperson.Add(person);
             }
+            int antaltimmar = 0;
+            int avgifter = 0;
+            foreach (var item in listaperson)
+            {
+                antaltimmar += item.Timmar;
+                avgifter += item.Lön;
+                item.Visatimlön();
+            }
+            Console.WriteLine("dina arbetare har jobbat" + antaltimmar + "timmar");
+            Console.WriteLine("du har betalat" + avgifter + "kr i avgifter");
+
             //spara ned som json
             string json = JsonConvert.SerializeObject(listaperson, Formatting.Indented);
             File.WriteAllText(@"listaperson.json", json);
-        }
-        static int ReadInt()
-        {
-            int heltal;
-            while (!int.TryParse(Console.ReadLine(), out heltal))
+            static int ReadInt()
             {
-                Console.WriteLine("Du skrev inte in ett heltal. Försök igen.");
+                int heltal;
+                while (!int.TryParse(Console.ReadLine(), out heltal))
+                {
+                    Console.WriteLine("Du skrev inte in ett heltal. Försök igen.");
+                }
+                return heltal;
             }
-            return heltal;
         }
     }
 }

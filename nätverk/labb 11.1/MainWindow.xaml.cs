@@ -36,7 +36,7 @@ namespace labb_11._1
             string url = "https://api.nasa.gov/planetary";
             var client = new RestClient(url);
             var request = new RestRequest("apod?api_key=3BnO79NdS2UdwKGLDXDC1QtyGsRm8eqGaNcdJyND"
-, RestSharp.DataFormat.Json);
+            , RestSharp.DataFormat.Json);
             var response = client.Get(request);
 
             NASA Results = new NASA();
