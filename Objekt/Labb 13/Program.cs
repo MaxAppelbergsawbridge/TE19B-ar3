@@ -11,8 +11,12 @@ namespace Labb_13
             person.Förnamn = Console.ReadLine();
             Console.WriteLine("skriv ditt efternamn");
             person.Efternamn = Console.ReadLine();
-            Console.WriteLine("vilket år var du född?");
+            Console.WriteLine("När var du född?(dd-mm-yyyy)");
             person.Födelseår = DateTime.Parse(Console.ReadLine());
+            Console.WriteLine("Hur mycket väger du?");
+            person.Vikt = ReadInt();
+            Console.WriteLine("Hur lång är du?");
+            person.Längd = ReadInt();
             if (person.Myndig())
             {
                 Console.WriteLine("Du är myndig");
@@ -31,6 +35,13 @@ namespace Labb_13
                 Console.WriteLine("Du skrev inte in ett heltal. Försök igen.");
             }
             return heltal;
+        }
+        public double GetAge(DateTime Födelseår)
+        {
+            double age = 0;
+            age = DateTime.Now.Subtract(Födelseår).Days;
+            age = age / 365.25;
+            return age;
         }
     }
 }

@@ -9,8 +9,11 @@ namespace Labb_13
         public DateTime Födelseår { get; set; }
         public bool Myndig()
         {
+            double age = 0;
+            age = DateTime.Now.Subtract(Födelseår).Days;
+            age = age / 365.25;
             DateTime Now = DateTime.Now;
-            int age = Now.Year - Födelseår.Year;
+            Console.WriteLine(age);
             if (age > 18)
             {
                 return true;
@@ -19,6 +22,12 @@ namespace Labb_13
             {
                 return false;
             }
+        }
+        public int Längd { get; set; }
+        public int Vikt { get; set; }   
+        public int BMI()
+        {
+            return Vikt / Längd * Längd;
         }
         public void Visanamn()
         {
