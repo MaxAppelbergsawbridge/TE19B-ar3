@@ -13,10 +13,21 @@ namespace Ny_mapp
         public string Personnr { get; set; }
         public IDictionary<string, int> Bilar { get => _bilar; set => _bilar = value; }
 
-        private IDictionary<string, int> _bilar = new IDictionary<string, int>();
-
-        _bilar.add("ABC123",500);
-        _bilar.add("DEF456",400);
-        _bilar.add("GHI789",199);
+        public IDictionary<string, int> _bilar = new Dictionary<string, int>
+        {
+        {"ABC123",500},
+        {"DEF456",400},
+        {"GHI789",199}
+        };
+        public int RäknaKostnad()
+        {
+            //@todo inte krascha om regnr inte finns
+            Kostnad = _bilar[RegNr] * Tidsram + Km * 2;
+            return Kostnad;
+        }
+        public string Räknainlämningsdatum()
+        {
+            return Datum.AddDays(Tidsram).ToString("dd MMMM yyyy");
+        }
     }
 }
