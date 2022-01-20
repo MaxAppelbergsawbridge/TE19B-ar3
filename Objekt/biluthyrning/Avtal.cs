@@ -29,5 +29,17 @@ namespace Ny_mapp
         {
             return Datum.AddDays(Tidsram).ToString("dd MMMM yyyy");
         }
+        public bool finnsRegnr()
+        {
+            if (_bilar.ContainsKey(RegNr))
+            {
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Regnr finns inte");
+                return false;
+            }
+        }
     }
 }
