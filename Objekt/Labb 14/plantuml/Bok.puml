@@ -1,0 +1,12 @@
+@startuml ClassdiagramBok
+skinparam ClassAttributeIconSize 0
+skinparam Monochrome true
+hide circle
+class Bok {
+    - Titel : string <<get>> <<set>>
+    - Författare : string <<get>> <<set>>
+    - Antalsidor : int <<get>> <<set>>
+    + Skrivut() : void
+    + Bok(_titel:string, _författare:string, _antalsidor:int)
+}
+@enduml

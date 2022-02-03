@@ -1,0 +1,16 @@
+@startuml ClassdiagramNewJson
+skinparam ClassAttributeIconSize 0
+skinparam Monochrome true
+hide circle
+class Kontakt {
+    + Namn : string
+    + Mobil : string
+}
+class MainWindow <<partial>> {
+    filen : string = "./kontakter.tsv"
+    kontaktLista : List<string>
+    + MainWindow()
+    - ClickSpara(sender:object, e:RoutedEventArgs) : void
+}
+Window <|-- MainWindow
+@enduml

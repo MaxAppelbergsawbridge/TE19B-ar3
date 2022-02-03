@@ -1,0 +1,8 @@
+@startuml ClassdiagramNewJson
+skinparam ClassAttributeIconSize 0
+skinparam Monochrome true
+hide circle
+class App <<partial>> {
+}
+Application <|-- App
+@enduml

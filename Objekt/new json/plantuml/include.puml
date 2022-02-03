@@ -1,0 +1,54 @@
+@startuml ClassdiagramNewJson
+skinparam ClassAttributeIconSize 0
+skinparam Monochrome true
+hide circle
+class App <<partial>> {
+}
+Application <|-- App
+class Kontakt {
+    + Namn : string
+    + Mobil : string
+}
+class MainWindow <<partial>> {
+    filen : string = "./kontakter.tsv"
+    kontaktLista : List<string>
+    + MainWindow()
+    - ClickSpara(sender:object, e:RoutedEventArgs) : void
+}
+Window <|-- MainWindow
+class App <<partial>> {
+    + InitializeComponent() : void
+    + {static} Main() : void
+}
+class App <<partial>> {
+    + InitializeComponent() : void
+    + {static} Main() : void
+}
+class MainWindow <<partial>> {
+    <<internal>> rutaNamn : System.Windows.Controls.TextBox
+    <<internal>> rutaMobil : System.Windows.Controls.TextBox
+    <<internal>> rutaAllaKontakter : System.Windows.Controls.TextBox
+    <<internal>> rutaStatus : System.Windows.Controls.TextBlock
+    - _contentLoaded : bool
+    + InitializeComponent() : void
+    Connect(connectionId:int, target:object) : void
+}
+class MainWindow <<partial>> {
+    <<internal>> rutaNamn : System.Windows.Controls.TextBox
+    <<internal>> rutaMobil : System.Windows.Controls.TextBox
+    <<internal>> rutaAllaKontakter : System.Windows.Controls.TextBox
+    <<internal>> rutaStatus : System.Windows.Controls.TextBlock
+    - _contentLoaded : bool
+    + InitializeComponent() : void
+    Connect(connectionId:int, target:object) : void
+}
+class MainWindow <<partial>> {
+    <<internal>> rutaNamn : System.Windows.Controls.TextBox
+    <<internal>> rutaMobil : System.Windows.Controls.TextBox
+    <<internal>> rutaAllaKontakter : System.Windows.Controls.TextBox
+    <<internal>> rutaStatus : System.Windows.Controls.TextBlock
+    - _contentLoaded : bool
+    + InitializeComponent() : void
+    Connect(connectionId:int, target:object) : void
+}
+@enduml
