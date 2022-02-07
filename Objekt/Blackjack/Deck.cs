@@ -5,8 +5,24 @@ namespace Blackjack
 {
     public class Deck
     {
-        public int _nrOfDecks;
-        public List<Card> Card;
+        private int _nrOfDecks;
+        private List<Card> Card;
+        public Deck(int nrOfDecks)
+        {
 
+        }
+        public void ResetAndShuffle()
+        {
+
+        }
+        public void shuffle()
+        {
+
+        }
+        public Card Draw()
+        {
+            return;
+        }
     }
+
 }

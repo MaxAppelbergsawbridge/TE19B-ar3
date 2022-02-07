@@ -16,6 +16,10 @@ namespace Blackjack
         {
 
         }
+        public string Tostring()
+        {
+            return;
+        }
         public void PlayerDraw()
         {
 

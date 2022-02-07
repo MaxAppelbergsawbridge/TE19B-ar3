@@ -14,5 +14,9 @@ namespace Blackjack
         {
 
         }
+        public string Tostring()
+        {
+            return;
+        }
     }
 }
