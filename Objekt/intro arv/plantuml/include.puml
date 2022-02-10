@@ -1,0 +1,25 @@
+@startuml ClassdiagramPerson
+skinparam ClassAttributeIconSize 0
+skinparam Monochrome true
+hide circle
+class Person {
+    + Namn : string <<get>> <<set>>
+    + Mobil : string <<get>> <<set>>
+    + <<virtual>> VisaInfo() : void
+}
+class Student {
+    + Årskurs : string <<get>> <<set>>
+    + Linje : string <<get>> <<set>>
+    + <<override>> VisaInfo() : void
+}
+class Lärare {
+    + Anställningsår : string <<get>> <<set>>
+    + Ämnen : string <<get>> <<set>>
+    + <<override>> VisaInfo() : void
+}
+class Program {
+    {static} Main(args:string[]) : void
+}
+Person <|-- Student
+Person <|-- Lärare
+@enduml
