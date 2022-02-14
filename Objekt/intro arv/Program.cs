@@ -4,6 +4,11 @@ namespace intro_arv
 {
     class Person
     {
+        public Person(string namn, string mobil)
+        {
+            Namn = namn;
+            Mobil = mobil;
+        }
         public string Namn { get; set; }
         public string Mobil { get; set; }
         public virtual void VisaInfo()
@@ -15,6 +20,11 @@ namespace intro_arv
     {
         public string Årskurs { get; set; }
         public string Linje { get; set; }
+        public Student(string n, string m, string årskurs, string linje) : base(n, m)
+        {
+            Årskurs = årskurs;
+            Linje = linje;
+        }
 
         public override void VisaInfo()
         {
@@ -26,6 +36,11 @@ namespace intro_arv
     {
         public string Anställningsår { get; set; }
         public string Ämnen { get; set; }
+        public Lärare(string n, string m, string anställningsår, string ämnen) : base(n, m)
+        {
+            Anställningsår = anställningsår;
+            Ämnen = ämnen;
+        }
         public override void VisaInfo()
         {
             Console.WriteLine($"Namn:{Namn},Mobil:{Mobil}");

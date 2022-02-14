@@ -1,0 +1,4 @@
+@startuml
+class "Enum`1"<T> {
+}
+@enduml
