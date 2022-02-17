@@ -34,15 +34,16 @@ namespace labb_17
             return null;
         }
 
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                Console.WriteLine("Hello World!");
-            }
-        }
 
     }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+
 }
 
 

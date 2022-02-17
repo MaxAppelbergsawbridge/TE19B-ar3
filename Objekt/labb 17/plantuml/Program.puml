@@ -18,5 +18,4 @@ class Program {
     {static} Main(args:string[]) : void
 }
 GameObject <|-- Meteor
-Meteor +-- Program
 @enduml
