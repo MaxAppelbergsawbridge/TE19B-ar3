@@ -44,25 +44,20 @@
                     </Grid.ColumnDefinitions>
                     <Label Grid.Row="0" Grid.Column="0">Titel</Label>
                     <TextBox Name="rutaBoktitel" Grid.Row="0" Grid.Column="1" Margin="5"/>
-                    <Label Grid.Row="1" Grid.Column="0">Regissör</Label>
+                    <Label Grid.Row="1" Grid.Column="0">Författare</Label>
                     <TextBox Name="rutaFörfattare" Grid.Row="1" Grid.Column="1" Margin="5"/>
-                    <Label Grid.Row="2" Grid.Column="0">Spellängd (min)</Label>
+                    <Label Grid.Row="2" Grid.Column="0">Antalsidor (min)</Label>
                     <TextBox Name="rutaLängdBok" Grid.Row="2" Grid.Column="1" Margin="5"/>
                     <Button Click="KlickSparaBok" Grid.Row="3" Grid.Column="0">Spara</Button>
                 </Grid>
             </TabItem>
         </TabControl>
-        <ListBox>
-            <StackPanel>
-                <Label Name="Visa">
-                    <RadioButton Name="Media">
-                        <RadioButton Name="Böcker">
-                            <RadioButton Name="Filmer"></RadioButton>
-                        </RadioButton>
-                    </RadioButton>
-                </Label>
-            </StackPanel>
-            <Grid></Grid>
-        </ListBox>
+        <ListBox Name="rutaResultat" Grid.Row="0" Grid.Column="1" Margin="5"/>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="5" Background="#FFF">
+            <Label FontWeight="Bold">Visa</Label>
+            <RadioButton Name="allt" Checked="CheckaRadio" IsChecked="True" GroupName="filter" Margin="5">Allt</RadioButton>
+            <RadioButton Name="böcker" Checked="CheckaRadio" GroupName="filter" Margin="5">Böcker</RadioButton>
+            <RadioButton Name="filmer" Checked="CheckaRadio" GroupName="filter" Margin="5">Filmer</RadioButton>
+        </StackPanel>
     </Grid>
 </Window>

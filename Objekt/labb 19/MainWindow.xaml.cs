@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Newtonsoft.Json;
 
 namespace labb_19
 {
@@ -20,17 +21,87 @@ namespace labb_19
     /// </summary>
     public partial class MainWindow : Window
     {
+        static List<Media> Medier = new List<Media>();
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+        public class Media
+        {
+            public string Titel { get; set; }
+            public virtual string TillText()
+            {
+                return $"{Titel}";
+            }
+        }
+        public class Film : Media
+        {
+            public string Regissör { get; set; }
+            public int Längd { get; set; }
+            public Film(string titel, string regissör, string längd)
+            {
+                Titel = titel;
+                Regissör = regissör;
+                Längd = int.Parse(längd);
+            }
+            public override string TillText()
+            {
+                return $"{Titel}({Regissör} {Längd})";
+            }
+        }
+        public class Bok : Media
+        {
+            public string Författare { get; set; }
+            public int Antalsidor { get; set; }
+            public Bok(string titel, string författare, string antalSidor)
+            {
+                Titel = titel;
+                Författare = författare;
+                Antalsidor = int.Parse(antalSidor);
+            }
+            public override string TillText()
+            {
+                return $"{Titel}({Författare}{Antalsidor}";
+            }
         }
         public void KlickSparaFilm(object sender, RoutedEventArgs e)
         {
-
+            string titel = rutaFilmtitel.Text;
+            string regissör = rutaRegissör.Text;
+            string längd = rutaLängdFilm.Text;
+            Film film = new Film(titel, regissör, längd);
+            Medier.Add(film);
+            string json = JsonConvert.SerializeObject(Medier, Formatting.Indented);
+            rutaResultat.Items.Add(film.TillText());
         }
         public void KlickSparaBok(object sender, RoutedEventArgs e)
         {
-
+            Bok bok = new Bok(rutaBoktitel.Text, rutaFörfattare.Text, rutaLängdBok.Text);
+            rutaResultat.Items.Add(bok.TillText());
+            Medier.Add(bok);
+        }
+        public void CheckaRadio(object sender, RoutedEventArgs e)
+        {
+            rutaResultat.Items.Clear();
+            string svar = ((RadioButton)sender).Name;
+            foreach (var item in Medier)
+            {
+                if (svar == "böcker")
+                {
+                    if (item is Bok)
+                    {
+                        rutaResultat.Items.Add(item);
+                    }
+                }
+                else if (svar == "filmer")
+                {
+                    if (item is Film)
+                    {
+                        rutaResultat.Items.Add(item);
+                    }
+                }
+            }
         }
     }
 }
