@@ -62,17 +62,14 @@ namespace labb_19
             }
             public override string TillText()
             {
-                return $"{Titel}({Författare}{Antalsidor}";
+                return $"{Titel}({Författare}{Antalsidor})";
             }
         }
         public void KlickSparaFilm(object sender, RoutedEventArgs e)
         {
-            string titel = rutaFilmtitel.Text;
-            string regissör = rutaRegissör.Text;
-            string längd = rutaLängdFilm.Text;
-            Film film = new Film(titel, regissör, längd);
+            Film film = new Film(rutaFilmtitel.Text, rutaRegissör.Text, rutaLängdFilm.Text);
             Medier.Add(film);
-            string json = JsonConvert.SerializeObject(Medier, Formatting.Indented);
+            //string json = JsonConvert.SerializeObject(Medier, Formatting.Indented);
             rutaResultat.Items.Add(film.TillText());
         }
         public void KlickSparaBok(object sender, RoutedEventArgs e)
@@ -87,19 +84,23 @@ namespace labb_19
             string svar = ((RadioButton)sender).Name;
             foreach (var item in Medier)
             {
-                if (svar == "böcker")
+                switch (svar)
                 {
-                    if (item is Bok)
-                    {
-                        rutaResultat.Items.Add(item);
-                    }
-                }
-                else if (svar == "filmer")
-                {
-                    if (item is Film)
-                    {
-                        rutaResultat.Items.Add(item);
-                    }
+                    case "böcker":
+                        if (item is Bok)
+                        {
+                            rutaResultat.Items.Add(item.TillText());
+                        }
+                        break;
+                    case "filmer":
+                        if (item is Film)
+                        {
+                            rutaResultat.Items.Add(item.TillText());
+                        }
+                        break;
+                    default:
+                        rutaResultat.Items.Add(item.TillText());
+                        break;
                 }
             }
         }

@@ -55,9 +55,9 @@
         <ListBox Name="rutaResultat" Grid.Row="0" Grid.Column="1" Margin="5"/>
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="5" Background="#FFF">
             <Label FontWeight="Bold">Visa</Label>
-            <RadioButton Name="allt" Checked="CheckaRadio" IsChecked="True" GroupName="filter" Margin="5">Allt</RadioButton>
-            <RadioButton Name="böcker" Checked="CheckaRadio" GroupName="filter" Margin="5">Böcker</RadioButton>
-            <RadioButton Name="filmer" Checked="CheckaRadio" GroupName="filter" Margin="5">Filmer</RadioButton>
+            <RadioButton Name="allt" Click="CheckaRadio" IsChecked="True" GroupName="filter" Margin="5">Allt</RadioButton>
+            <RadioButton Name="böcker" Click="CheckaRadio" GroupName="filter" Margin="5">Böcker</RadioButton>
+            <RadioButton Name="filmer" Click="CheckaRadio" GroupName="filter" Margin="5">Filmer</RadioButton>
         </StackPanel>
     </Grid>
 </Window>
