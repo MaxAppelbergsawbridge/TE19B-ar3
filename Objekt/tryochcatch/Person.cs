@@ -43,10 +43,10 @@ namespace tryochcatch
                 }
             }
         }
-        public Person(string a, string b)
+        public Person(string förnamn, string efternamn)
         {
-            Förnamn = a;
-            Efternamn = b;
+            Förnamn = förnamn;
+            Efternamn = efternamn;
         }
     }
     class Student : Person
@@ -78,6 +78,77 @@ namespace tryochcatch
         public Student(string förnamn, string efternamn, string studieprogram) : base(förnamn, efternamn)
         {
             Studieprogram = studieprogram;
+        }
+    }
+    class Arbetare : Person
+    {
+        private int lön;
+        private int antaltimmar;
+        public int Lön
+        {
+            get
+            { return lön; }
+            set
+            {
+                if (value >= 0 && value <= 20000)
+                {
+                    lön = value;
+                }
+                else
+                {
+                    throw new ArgumentException("");
+                }
+            }
+        }
+        public int Antaltimmar
+        {
+            get
+            {
+                return antaltimmar;
+            }
+            set
+            {
+                if (value >= 0 && value <= 50)
+                {
+                    antaltimmar = value;
+                }
+                else
+                {
+                    throw new ArgumentException("");
+                }
+            }
+        }
+
+        public Arbetare(string förnamn, string efternamn, string lön, string antaltimmar) : base(förnamn, efternamn)
+        {
+            try
+            {
+                if (!(int.TryParse(lön, out int resultatLön)))
+                {
+                    throw new ArgumentException("Lön måste vara ett heltal");
+                }
+                else
+                {
+                    Lön = resultatLön;
+                }
+                if (!(int.TryParse(antaltimmar, out int resultatTimmar)))
+                {
+                    throw new ArgumentException("Antaltimmar måste vara ett heltal");
+                }
+                else
+                {
+                    Antaltimmar = resultatTimmar;
+                }
+            }
+            catch (System.Exception)
+            {
+
+                throw;
+            }
+        }
+        private float RäknaUtTimlön()
+        {
+            return lön / antaltimmar;
         }
     }
 }
