@@ -58,6 +58,14 @@ namespace intromonogame
             jumpingTexture = Content.Load<Texture2D>("jump");
             fireballTexture = Content.Load<Texture2D>("fireball");
             crouchTexture = Content.Load<Texture2D>("crouch");
+            layer1Texture = Content.Load<Texture2D>("layer1");
+            layer2Texture = Content.Load<Texture2D>("layer2");
+            layer3Texture = Content.Load<Texture2D>("layer3");
+
+            layer1 = new ParallaxTexture(layer1Texture, 370);
+            layer2 = new ParallaxTexture(layer2Texture, 300);
+            layer3 = new ParallaxTexture(layer3Texture, 200);
+
             font = Content.Load<SpriteFont>("font");
         }
 
