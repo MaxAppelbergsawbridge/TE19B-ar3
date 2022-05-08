@@ -7,6 +7,7 @@ Databas
 -Minska storleken på rutorna och knapparna
 -Göra den höger rutan synlig
 -Göra rutorna proportionell
+-wrap på apppen eller scroll på boxen
 
 ## funktion(vad programmet ska göra(knappar osv))
 
