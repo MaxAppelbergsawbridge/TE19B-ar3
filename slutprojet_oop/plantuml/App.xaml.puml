@@ -1,0 +1,5 @@
+@startuml classdiagram
+class App <<partial>> {
+}
+Application <|-- App
+@enduml

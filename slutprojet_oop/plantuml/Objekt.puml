@@ -1,0 +1,9 @@
+@startuml
+class Objekt {
+    + Namn : string <<get>> <<set>>
+    + Mängd : string <<get>> <<set>>
+    + Datum : string <<get>> <<set>>
+    + Info : string <<get>> <<set>>
+    + Objekt(namn:string, mängd:string, datum:string, info:string)
+}
+@enduml

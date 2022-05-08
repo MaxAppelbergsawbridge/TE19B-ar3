@@ -1,0 +1,10 @@
+@startuml
+class MainWindow <<partial>> {
+    ListaObjekt : List<Objekt>
+    + MainWindow()
+    - KnappSparaClick(sender:object, e:RoutedEventArgs) : void
+    - KnappRaderaClick(sender:object, e:RoutedEventArgs) : void
+    - NyCategoriClick(sender:object, e:RoutedEventArgs) : void
+}
+Window <|-- MainWindow
+@enduml

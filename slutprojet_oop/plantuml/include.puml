@@ -1,0 +1,59 @@
+@startuml
+class App <<partial>> {
+}
+Application <|-- App
+class Genre {
+    + GenreNamn : string <<get>> <<set>>
+    + MängdObjekt : string <<get>> <<set>>
+    + DatumGenre : string <<get>> <<set>>
+    + InfoGenre : string <<get>> <<set>>
+    + ListAvEgenskaper : string <<get>> <<set>>
+    + Genre(genreNamn:string, mängdObjekt:string, listAvEgenskaper:string, datum:string, info:string)
+}
+Objekt <|-- Genre
+class MainWindow <<partial>> {
+    ListaObjekt : List<Objekt>
+    + MainWindow()
+    - KnappSparaClick(sender:object, e:RoutedEventArgs) : void
+    - KnappRaderaClick(sender:object, e:RoutedEventArgs) : void
+    - NyCategoriClick(sender:object, e:RoutedEventArgs) : void
+}
+Window <|-- MainWindow
+class Objekt {
+    + Namn : string <<get>> <<set>>
+    + Mängd : string <<get>> <<set>>
+    + Datum : string <<get>> <<set>>
+    + Info : string <<get>> <<set>>
+    + Objekt(namn:string, mängd:string, datum:string, info:string)
+}
+class App <<partial>> {
+    + InitializeComponent() : void
+    + {static} Main() : void
+}
+class App <<partial>> {
+    + InitializeComponent() : void
+    + {static} Main() : void
+}
+class MainWindow <<partial>> {
+    <<internal>> NamnRuta : System.Windows.Controls.TextBox
+    <<internal>> MängdRuta : System.Windows.Controls.TextBox
+    <<internal>> DatumRuta : System.Windows.Controls.TextBox
+    <<internal>> InfoRuta : System.Windows.Controls.TextBox
+    <<internal>> NyCategori : System.Windows.Controls.TextBox
+    <<internal>> VisaRuta : System.Windows.Controls.ListBox
+    - _contentLoaded : bool
+    + InitializeComponent() : void
+    Connect(connectionId:int, target:object) : void
+}
+class MainWindow <<partial>> {
+    <<internal>> NamnRuta : System.Windows.Controls.TextBox
+    <<internal>> MängdRuta : System.Windows.Controls.TextBox
+    <<internal>> DatumRuta : System.Windows.Controls.TextBox
+    <<internal>> InfoRuta : System.Windows.Controls.TextBox
+    <<internal>> NyCategori : System.Windows.Controls.TextBox
+    <<internal>> VisaRuta : System.Windows.Controls.ListBox
+    - _contentLoaded : bool
+    + InitializeComponent() : void
+    Connect(connectionId:int, target:object) : void
+}
+@enduml

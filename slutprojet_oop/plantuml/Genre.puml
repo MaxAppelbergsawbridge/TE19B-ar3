@@ -1,0 +1,11 @@
+@startuml
+class Genre {
+    + GenreNamn : string <<get>> <<set>>
+    + MängdObjekt : string <<get>> <<set>>
+    + DatumGenre : string <<get>> <<set>>
+    + InfoGenre : string <<get>> <<set>>
+    + ListAvEgenskaper : string <<get>> <<set>>
+    + Genre(genreNamn:string, mängdObjekt:string, listAvEgenskaper:string, datum:string, info:string)
+}
+Objekt <|-- Genre
+@enduml
