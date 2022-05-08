@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace slutprojet_oop
 {
@@ -20,6 +22,7 @@ namespace slutprojet_oop
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Objekt> ListaObjekt = new List<Objekt>();
         public MainWindow()
         {
             //projekt: databas för samlare
@@ -27,8 +30,11 @@ namespace slutprojet_oop
         }
         private void KnappSparaClick(object sender, RoutedEventArgs e)
         {
-            string svar = SvarRuta.Text;
-            VisaRuta.Text += svar;
+            Objekt objekt = new Objekt(NamnRuta.Text, MängdRuta.Text, DatumRuta.Text, InfoRuta.Text);
+            ListaObjekt.Add(objekt);
+            string jsonText = JsonConvert.SerializeObject(ListaObjekt, Formatting.Indented);
+            File.WriteAllText("Objekt.json", jsonText);
+            VisaRuta.Text += jsonText;
         }
         private void KnappRaderaClick(object sender, RoutedEventArgs e)
         {

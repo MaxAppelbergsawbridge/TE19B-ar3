@@ -2,17 +2,29 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Label Grid.Row="0" Grid.Column="0">Databas</Label>
-        <TextBox Name="SvarRuta" Grid.Row="1" Grid.Column="0"></TextBox>
-        <Button Name="KnappSpara" Click="KnappSparaClick" Grid.Row="2" Grid.Column="0">Spara</Button>
-        <TextBlock Name="VisaRuta" Grid.Row="1" Grid.Column="1"></TextBlock>
-        <Button Name="KnappRadera" Click="KnappRaderaClick" Grid.Row="2" Grid.Column="1">Radera</Button>
+        <Label Grid.Row="0" Grid.Column="1">Databas</Label>
+        <Label Grid.Row="1" Grid.Column="0">Namn:</Label>
+        <TextBox Name="NamnRuta" Grid.Row="1" Grid.Column="1"></TextBox>
+        <Label Grid.Row="2" Grid.Column="0">Mängd:</Label>
+        <TextBox Name="MängdRuta" Grid.Row="2" Grid.Column="1"></TextBox>
+        <Label Grid.Row="3" Grid.Column="0">Datum:</Label>
+        <TextBox Name="DatumRuta" Grid.Row="3" Grid.Column="1"></TextBox>
+        <Label Grid.Row="4" Grid.Column="0">Info:</Label>
+        <TextBox Name="InfoRuta" Grid.Row="4" Grid.Column="1"></TextBox>
+        <Button Name="KnappSpara" Click="KnappSparaClick" Grid.Row="5" Grid.Column="1">Spara</Button>
+        <TextBox Name="VisaRuta" Grid.Row="4" Grid.Column="2">Sparade Objekt</TextBox>
+        <Button Name="KnappRadera" Click="KnappRaderaClick" Grid.Row="5" Grid.Column="2">Radera</Button>
     </Grid>
 </Window>

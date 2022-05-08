@@ -2,8 +2,8 @@
     <StackPanel>
         <Label> Öppna en textfil </Label>
         <Label> ange en filnamn </Label>
-        <TextBox name="fil"></TextBox>
-        <Button name="">
+        <TextBox Name="fil"></TextBox>
+        <Button Name="button">
             <TextBox Name="resultatRuta" Margin="5" Height="150" Background="#FFF" FontStyle="italic" TextWrapping="WrapWithOverflow" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" IsReadOnly="True"/>
         </Button>
     </StackPanel>
